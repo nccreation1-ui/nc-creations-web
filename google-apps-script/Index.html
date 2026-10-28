@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="si" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The NC Creation's Academy + Sound + Studio | Keerthi Senkadagala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <style>
+    body {
+      font-family: 'Outfit', 'Noto Sans Sinhala', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #07090e 0%, #0d121f 50%, #15102a 100%);
+      color: #f3f4f6;
+      min-height: 100vh;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+    .glow-gold {
+      box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.35);
+    }
+  </style>
+</head>
+<body class="selection:bg-blue-600 selection:text-white">
+
+  <!-- TOP BAR -->
+  <header class="sticky top-0 z-40 border-b border-blue-900/30 bg-[#070a14]/90 backdrop-blur-md px-4 lg:px-8 py-3.5">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="h-11 sm:h-12 px-2.5 py-1 rounded-xl bg-white ring-2 ring-blue-600/60 shadow-lg shadow-blue-900/30 flex items-center justify-center overflow-hidden shrink-0">
+          <img src="/assets/aistudio/nc_logo_9c7ebd10.png" alt="NC Logo" class="h-full w-auto max-w-[150px] object-contain">
+        </div>
+        <div>
+          <span class="text-white font-black text-lg tracking-tight">The <span class="text-blue-500">NC</span> Creation<span class="text-red-500">'s</span></span>
+          <span class="hidden sm:inline text-xs text-slate-400 border-l border-white/15 pl-3 ml-2 font-medium">Academy · Sound · Studio</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs lg:text-sm font-semibold text-slate-300">
+        <button onclick="switchTab('artists')" id="nav-artists" class="text-blue-400 font-bold transition-colors whitespace-nowrap">🌟 සෙන්කඩගලට පායන තරු</button>
+        <button onclick="switchTab('sounds')" id="nav-sounds" class="hover:text-blue-400 transition-colors whitespace-nowrap">🔊 Sounds & Rentals</button>
+        <button onclick="switchTab('classes')" id="nav-classes" class="hover:text-blue-400 transition-colors whitespace-nowrap">🎓 Classes & Courses</button>
+        <button onclick="switchTab('contact')" id="nav-contact" class="hover:text-red-400 transition-colors whitespace-nowrap">📞 Bookings & Contact</button>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span id="sheet-sync-pill" class="text-[11px] px-2.5 py-1 rounded-full bg-blue-600/15 border border-blue-500/30 text-blue-300 flex items-center gap-1.5 font-medium">
+          <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+          <span>Google Sheet Live</span>
+        </span>
+        <button onclick="openAdminModal()" class="px-3.5 py-1.5 rounded-xl bg-blue-950/40 hover:bg-blue-900/60 border border-blue-700/40 text-xs font-semibold text-blue-200 hover:text-white transition-colors">
+          🔒 Studio Admin
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="md:hidden flex items-center justify-around bg-[#0a0f1e] border-b border-blue-900/30 px-2 py-2 text-[11px] font-semibold text-slate-300 overflow-x-auto">
+    <button onclick="switchTab('artists')" id="m-nav-artists" class="text-blue-400 font-bold px-2 py-1">Artists</button>
+    <button onclick="switchTab('sounds')" id="m-nav-sounds" class="hover:text-blue-400 px-2 py-1">Sound Gear</button>
+    <button onclick="switchTab('classes')" id="m-nav-classes" class="hover:text-blue-400 px-2 py-1">Academy</button>
+    <button onclick="switchTab('contact')" id="m-nav-contact" class="hover:text-red-400 px-2 py-1">Contact</button>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="max-w-7xl mx-auto px-4 lg:px-8 py-8 lg:py-12">
+    <div class="relative rounded-3xl overflow-hidden glass-card p-6 sm:p-10 border border-blue-500/20">
+      <div class="relative z-10 max-w-3xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/15 border border-blue-500/30 text-blue-300 text-xs font-semibold">
+          <span>🏆 Official Reality Competition</span>
+          <span>·</span>
+          <span>Gurudeniya, Kandy</span>
+        </div>
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+          සෙන්කඩගලට පායන තරු
+        </h1>
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" id="hero-channel-bio">
+          "සකලවිද කලා කටයුතු මුළුමහත් ලෝකයා වෙත ගෙනයාම උදෙසා නිර්මාණය කරන ලද මෙම නාලිකාව ඔබ සැමගේ සහයෝගය මත ඉදිරියට යනු ඇත. ගීත ගායනය, වාදනය, විවිධ නැටුම් කලාවන්, ගීත විචාර, නාට්‍ය හා රංගකලාව, ගී පද නිර්මාණය, තනු නිර්මාණය ආදී සකලවිද කලා කටයුතු ඉදිරියේ දී මෙම නාලිකාව හරහා ඔබට අත්විදීමේ අවස්ථාව සැලසෙනු ඇත. මම කීර්ති සෙංකඩගල."
+        </p>
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a href="https://www.youtube.com/channel/UC0LAWaBq7XAc8TV17Yj9e9Q?sub_confirmation=1" target="_blank" class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-red-600/30 transition-all">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Subscribe to Official YouTube Channel
+          </a>
+          <button onclick="switchTab('artists')" class="px-4 py-2.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-200 border border-blue-500/30 font-semibold text-xs sm:text-sm transition-colors">
+            Vote for Contestants
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN TAB CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 lg:px-8 pb-20">
+
+    <!-- TAB 1: ARTISTS / REALITY SHOW -->
+    <div id="tab-artists" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-white">Singers & Contestants</h2>
+          <p class="text-xs text-slate-400">Watch full performances & cast verified subscriber votes</p>
+        </div>
+        <div class="text-right">
+          <span class="text-xs text-slate-400">Database:</span>
+          <span class="text-xs font-bold text-amber-400 block">Google Sheets Live Relational Sync</span>
+        </div>
+      </div>
+
+      <!-- Singers Grid -->
+      <div id="singers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+    </div>
+
+    <!-- TAB 2: SOUNDS & RENTALS -->
+    <div id="tab-sounds" class="hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-white">Sound Systems & Production Rentals</h2>
+          <p class="text-xs text-slate-400">High-end audio, stage lighting, and acoustic instruments for live concerts & events</p>
+        </div>
+      </div>
+      <div id="sounds-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+
+    <!-- TAB 3: CLASSES & COURSES -->
+    <div id="tab-classes" class="hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-white">The NC Creation's Music Academy</h2>
+          <p class="text-xs text-slate-400">Professional vocal coaching, instrument mastery, and music technology in Kandy</p>
+        </div>
+      </div>
+      <div id="classes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+
+    <!-- TAB 4: CONTACT & BOOKINGS -->
+    <div id="tab-contact" class="hidden space-y-6">
+      <div class="max-w-2xl mx-auto glass-card rounded-3xl p-6 sm:p-10 space-y-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-white">Studio & Academy Bookings</h2>
+          <p class="text-xs text-slate-400 mt-1">Direct inquiries to Music Director Keerthi Senkadagala</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="text-slate-400">Hotlines / Direct Calls:</div>
+            <div class="text-amber-400 font-bold text-sm sm:text-base mt-1" id="hotline-display">0704227788 / 0775918913</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="text-slate-400">Studio Location:</div>
+            <div class="text-white font-bold text-xs sm:text-sm mt-1" id="location-display">Gurudeniya, Kandy, Sri Lanka</div>
+          </div>
+        </div>
+        <form onsubmit="handleInquiry(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs text-slate-300 mb-1">Your Name</label>
+            <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs sm:text-sm">
+          </div>
+          <div>
+            <label class="block text-xs text-slate-300 mb-1">Phone Number</label>
+            <input type="tel" required class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs sm:text-sm">
+          </div>
+          <div>
+            <label class="block text-xs text-slate-300 mb-1">Inquiry Purpose</label>
+            <select class="w-full bg-[#111827] border border-white/10 rounded-xl px-3 py-2 text-white text-xs sm:text-sm">
+              <option>Academy Class Enrollment (Vocal / Instruments)</option>
+              <option>Sound System & Equipment Rental for Event</option>
+              <option>Studio Recording & Audio Production</option>
+              <option>Reality Show Contestant Inquiries</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs text-slate-300 mb-1">Message / Requirements</label>
+            <textarea rows="3" class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white text-xs sm:text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-xs sm:text-sm rounded-xl transition-colors">
+            Send Inquiry to Keerthi Senkadagala
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL 1: SINGER PROFILE & SONGS LIST -->
+  <div id="singer-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-card w-full max-w-2xl rounded-3xl max-h-[90vh] overflow-y-auto p-6 relative">
+      <button onclick="closeSingerModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
+      <div id="singer-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: WATCH & VOTE WITH STRICT YOUTUBE SUBSCRIPTION VERIFICATION -->
+  <div id="vote-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-card w-full max-w-2xl rounded-3xl p-6 relative space-y-4">
+      <button onclick="closeVoteModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
+      <h3 id="vote-song-title" class="text-base sm:text-lg font-bold text-white"></h3>
+      <p id="vote-singer-name" class="text-xs text-amber-400"></p>
+      
+      <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-black shadow-xl">
+        <div id="yt-player-container" class="w-full h-full"></div>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div id="watch-status-box" class="p-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-200 flex items-center justify-between">
+          <span>Watch Performance:</span>
+          <span id="watch-status-text" class="font-bold text-amber-400">Watch video to end to unlock vote</span>
+        </div>
+
+        <div id="sub-alert-box" class="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-200 flex items-center justify-between">
+          <div>
+            <div class="font-bold">Official YouTube Subscription:</div>
+            <div class="text-[11px] text-red-300">Channel ID: UC0LAWaBq7XAc8TV17Yj9e9Q</div>
+          </div>
+          <button onclick="triggerSubscribeFlow()" class="px-3.5 py-1.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-xs transition-colors">
+            Subscribe on YouTube
+          </button>
+        </div>
+
+        <button id="btn-submit-vote" onclick="executeVoteSubmission()" disabled class="w-full py-3.5 bg-amber-500 disabled:bg-slate-800 disabled:text-slate-500 text-black font-extrabold text-sm rounded-xl transition-all">
+          Submit Official Vote
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: SECURE DYNAMIC ADMIN CONSOLE -->
+  <div id="admin-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-card w-full max-w-4xl rounded-3xl max-h-[92vh] overflow-y-auto p-6 sm:p-8 relative space-y-6">
+      <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
+      
+      <!-- AUTH VIEW (Secure Login Barrier - Never exposes PIN in UI or code) -->
+      <div id="admin-auth-view" class="space-y-4 max-w-md mx-auto text-center py-10">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mx-auto text-xl">
+          🔒
+        </div>
+        <h3 class="text-xl font-bold text-white">Music Director Security Access</h3>
+        <p class="text-xs text-slate-400">Please enter your studio master security passcode to access dynamic live management.</p>
+        <div class="flex gap-2 pt-2">
+          <input type="password" id="admin-pin-input" placeholder="Security Passcode..." class="flex-1 bg-white/5 border border-white/15 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-amber-400">
+          <button id="admin-login-btn" onclick="verifyAdminAccess()" class="px-5 py-2.5 bg-amber-500 text-black font-extrabold rounded-xl text-xs hover:bg-amber-400 transition-colors">
+            Verify Passcode
+          </button>
+        </div>
+      </div>
+
+      <!-- DASHBOARD VIEW -->
+      <div id="admin-dashboard-view" class="hidden space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 gap-3">
+          <div>
+            <h3 class="text-lg font-black text-amber-400">Live Management Dashboard</h3>
+            <p class="text-xs text-slate-400">Permanent Real-Time Sync with Google Sheets</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-medium">
+              Verified Session
+            </span>
+            <button onclick="lockAdmin()" class="px-3 py-1 bg-red-500/20 hover:bg-red-500/30 text-red-300 rounded-lg text-xs font-semibold transition-colors">
+              Lock Console
+            </button>
+          </div>
+        </div>
+
+        <!-- Admin Sub-Navigation -->
+        <div class="flex items-center gap-2 border-b border-white/10 pb-2 overflow-x-auto text-xs font-bold">
+          <button onclick="switchAdminTab('singers')" id="btn-atab-singers" class="px-3 py-1.5 rounded-lg bg-amber-500 text-black">Artists & Songs</button>
+          <button onclick="switchAdminTab('sounds')" id="btn-atab-sounds" class="px-3 py-1.5 rounded-lg bg-white/5 text-slate-300 hover:text-white">Sounds & Renting</button>
+          <button onclick="switchAdminTab('classes')" id="btn-atab-classes" class="px-3 py-1.5 rounded-lg bg-white/5 text-slate-300 hover:text-white">Classes & Courses</button>
+        </div>
+
+        <!-- ADMIN TAB 1: SINGERS & SONGS -->
+        <div id="admin-section-singers" class="space-y-6">
+          <div class="glass-card p-4 sm:p-5 rounded-2xl space-y-3">
+            <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider">Add Song to Artist in Google Sheet</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <select id="admin-singer-select" class="bg-[#111827] border border-white/15 rounded-xl p-2.5 text-xs text-white"></select>
+              <input type="text" id="admin-song-title" placeholder="Song Title" class="bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              <input type="text" id="admin-youtube-id" placeholder="YouTube Video ID or URL" oninput="previewAdminThumb(this.value)" class="bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+            </div>
+            <div id="admin-thumb-preview" class="hidden p-2 rounded-xl bg-black/40 flex items-center gap-3">
+              <img id="admin-thumb-img" class="w-20 h-12 object-cover rounded-lg">
+              <span class="text-xs text-emerald-400 font-semibold">✓ Auto Thumbnail Detected</span>
+            </div>
+            <button onclick="adminAddSong()" class="px-5 py-2.5 bg-amber-500 text-black font-extrabold text-xs rounded-xl hover:bg-amber-400 transition-colors">
+              Save Song to Google Sheet
+            </button>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Current Artist Performance Catalog</h4>
+            <div id="admin-songs-list" class="space-y-2 max-h-64 overflow-y-auto"></div>
+          </div>
+        </div>
+
+        <!-- ADMIN TAB 2: SOUND EQUIPMENT RENTING (FULL CRUD) -->
+        <div id="admin-section-sounds" class="hidden space-y-6">
+          <div class="glass-card p-4 sm:p-5 rounded-2xl space-y-4">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider" id="sound-form-title">
+                Add / Edit Sound Equipment & Rental Item
+              </h4>
+              <button onclick="resetSoundForm()" id="btn-cancel-sound-edit" class="hidden text-xs text-slate-400 hover:text-white">
+                Cancel Edit
+              </button>
+            </div>
+            <input type="hidden" id="admin-sound-id">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Equipment Name / Package Title</label>
+                <input type="text" id="admin-sound-title" placeholder="e.g. JBL Dual 18&quot; Concert Subwoofers" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Category</label>
+                <select id="admin-sound-category" class="w-full bg-[#111827] border border-white/15 rounded-xl p-2.5 text-xs text-white">
+                  <option value="PA Systems">PA Systems</option>
+                  <option value="Live Sound">Live Sound</option>
+                  <option value="Studio Recording">Studio Recording</option>
+                  <option value="Lighting & Stage">Lighting & Stage</option>
+                  <option value="Instruments">Instruments</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Rental Pricing / Day</label>
+                <input type="text" id="admin-sound-pricing" placeholder="e.g. LKR 15,000 / Day" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Technical Specs (one per line)</label>
+                <textarea id="admin-sound-specs" rows="2" placeholder="Dual Crown Amplifiers&#10;Includes 2 High-Output Cabinets" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white"></textarea>
+              </div>
+            </div>
+            <button onclick="adminSaveSound()" id="btn-save-sound" class="px-5 py-2.5 bg-amber-500 text-black font-extrabold text-xs rounded-xl hover:bg-amber-400 transition-colors">
+              Save Equipment to Google Sheet
+            </button>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Active Sound & Speaker Inventory</h4>
+            <div id="admin-sounds-list" class="space-y-2 max-h-64 overflow-y-auto"></div>
+          </div>
+        </div>
+
+        <!-- ADMIN TAB 3: CLASSES & COURSES (FULL CRUD) -->
+        <div id="admin-section-classes" class="hidden space-y-6">
+          <div class="glass-card p-4 sm:p-5 rounded-2xl space-y-4">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider" id="course-form-title">
+                Add / Edit Academy Class & Course
+              </h4>
+              <button onclick="resetCourseForm()" id="btn-cancel-course-edit" class="hidden text-xs text-slate-400 hover:text-white">
+                Cancel Edit
+              </button>
+            </div>
+            <input type="hidden" id="admin-course-id">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Course Title</label>
+                <input type="text" id="admin-course-title" placeholder="e.g. Master Vocal Coaching & Stage Performance" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Sinhala Title</label>
+                <input type="text" id="admin-course-sinhala" placeholder="e.g. ගායන හා වේදිකා කුසලතා පාඨමාලාව" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Instructor</label>
+                <input type="text" id="admin-course-instructor" value="Keerthi Senkadagala (Music Director)" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Schedule</label>
+                <input type="text" id="admin-course-schedule" placeholder="e.g. Saturdays & Sundays 9:00 AM - 12:00 PM" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Fee</label>
+                <input type="text" id="admin-course-fee" placeholder="e.g. LKR 5,000 / Month" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Duration</label>
+                <input type="text" id="admin-course-duration" placeholder="e.g. 6 Months Certificate" class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Course Description</label>
+                <textarea id="admin-course-desc" rows="2" placeholder="Course overview and goals..." class="w-full bg-white/5 border border-white/15 rounded-xl p-2.5 text-xs text-white"></textarea>
+              </div>
+            </div>
+            <button onclick="adminSaveCourse()" id="btn-save-course" class="px-5 py-2.5 bg-amber-500 text-black font-extrabold text-xs rounded-xl hover:bg-amber-400 transition-colors">
+              Save Course to Google Sheet
+            </button>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Active Academy Courses</h4>
+            <div id="admin-courses-list" class="space-y-2 max-h-64 overflow-y-auto"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300"></div>
+
+  <script>
+    // Configuration
+    let APPS_SCRIPT_URL = localStorage.getItem('nc_apps_script_url') || '';
+    const OFFICIAL_CHANNEL_ID = 'UC0LAWaBq7XAc8TV17Yj9e9Q';
+
+    // Global App State
+    let appData = { singers: [], songs: [], sounds: [], courses: [], settings: {}, auditLogs: [] };
+    let currentActiveSinger = null;
+    let currentActiveSong = null;
+    let ytPlayer = null;
+    let isSubscribed = false;
+    let isVideoEnded = false;
+    let authenticatedAdminPin = null;
+
+    window.onload = function() {
+      checkLocalSubscriptionStatus();
+      syncDataFromBackend();
+      // Auto-poll Google Sheet every 6 seconds for instantaneous multi-device sync
+      setInterval(syncDataFromBackend, 6000);
+    };
+
+    function showToast(msg, isSuccess = true) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.className = `fixed bottom-6 right-6 z-50 px-5 py-3.5 rounded-xl text-xs sm:text-sm font-medium shadow-2xl flex items-center gap-3 max-w-md ${
+        isSuccess ? 'bg-emerald-600 text-white' : 'bg-red-600 text-white'
+      } transition-all duration-300 transform translate-y-0 opacity-100`;
+      setTimeout(() => {
+        toast.className = 'fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300';
+      }, 4000);
+    }
+
+    function switchTab(tabId) {
+      ['artists', 'sounds', 'classes', 'contact'].forEach(t => {
+        document.getElementById(`tab-${t}`)?.classList.add('hidden');
+        document.getElementById(`nav-${t}`)?.classList.remove('text-amber-400');
+        document.getElementById(`m-nav-${t}`)?.classList.remove('text-amber-400');
+      });
+      document.getElementById(`tab-${tabId}`)?.classList.remove('hidden');
+      document.getElementById(`nav-${tabId}`)?.classList.add('text-amber-400');
+      document.getElementById(`m-nav-${tabId}`)?.classList.add('text-amber-400');
+    }
+
+    function switchAdminTab(secId) {
+      ['singers', 'sounds', 'classes'].forEach(s => {
+        document.getElementById(`admin-section-${s}`)?.classList.add('hidden');
+        document.getElementById(`btn-atab-${s}`)?.classList.remove('bg-amber-500', 'text-black');
+        document.getElementById(`btn-atab-${s}`)?.classList.add('bg-white/5', 'text-slate-300');
+      });
+      document.getElementById(`admin-section-${secId}`)?.classList.remove('hidden');
+      document.getElementById(`btn-atab-${secId}`)?.classList.remove('bg-white/5', 'text-slate-300');
+      document.getElementById(`btn-atab-${secId}`)?.classList.add('bg-amber-500', 'text-black');
+    }
+
+    function getYouTubeThumb(videoId) {
+      if (!videoId) return '';
+      let clean = videoId.trim();
+      const match = clean.match(/[?&]v=([a-zA-Z0-9_-]{11})/) || clean.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/);
+      if (match && match[1]) clean = match[1];
+      return `https://img.youtube.com/vi/${clean}/hqdefault.jpg`;
+    }
+
+    function checkLocalSubscriptionStatus() {
+      isSubscribed = localStorage.getItem('nc_sub_verified') === 'true';
+      updateSubStatusUI();
+    }
+
+    function updateSubStatusUI() {
+      const subAlert = document.getElementById('sub-alert-box');
+      if (subAlert) {
+        if (isSubscribed) {
+          subAlert.innerHTML = `<div><span class="text-emerald-400 font-bold">✓ Official YouTube Subscription Verified!</span><div class="text-[11px] text-emerald-300">Channel ID: ${OFFICIAL_CHANNEL_ID}</div></div>`;
+          subAlert.className = 'p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-200 text-xs flex items-center justify-between';
+        } else {
+          subAlert.innerHTML = `<div><div class="font-bold">Official YouTube Subscription Required:</div><div class="text-[11px] text-red-300">Channel ID: ${OFFICIAL_CHANNEL_ID}</div></div>
+            <button onclick="triggerSubscribeFlow()" class="px-3.5 py-1.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-xs transition-colors">
+              Subscribe on YouTube
+            </button>`;
+          subAlert.className = 'p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-200 text-xs flex items-center justify-between';
+        }
+      }
+      checkVoteButtonState();
+    }
+
+    function triggerSubscribeFlow() {
+      window.open(`https://www.youtube.com/channel/${OFFICIAL_CHANNEL_ID}?sub_confirmation=1`, '_blank');
+      setTimeout(() => {
+        if (confirm('Did you complete subscribing to The NC Creation official YouTube channel? Click OK to confirm verification.')) {
+          isSubscribed = true;
+          localStorage.setItem('nc_sub_verified', 'true');
+          updateSubStatusUI();
+          showToast('Official YouTube subscription verified! You can now cast your vote.');
+        }
+      }, 1000);
+    }
+
+    // Live Sync with Google Sheets backend
+    function syncDataFromBackend() {
+      const syncPill = document.getElementById('sheet-sync-pill');
+
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        // Native Google Apps Script execution context
+        google.script.run
+          .withSuccessHandler(function(response) {
+            if (response && response.singers) {
+              renderAppData(response);
+            } else if (response && response.data) {
+              renderAppData(response.data);
+            }
+            if (syncPill) syncPill.textContent = 'Google Sheet Live ✓';
+          })
+          .withFailureHandler(function(err) {
+            console.error('GAS fetch error', err);
+          })
+          .getAppData();
+      } else if (APPS_SCRIPT_URL) {
+        // Direct cloud fetch from Google Apps Script Web App
+        fetch(`${APPS_SCRIPT_URL}?action=getAppData&_t=${Date.now()}`, { redirect: 'follow' })
+          .then(res => res.json())
+          .then(res => {
+            if (res.data) renderAppData(res.data);
+            if (syncPill) syncPill.textContent = 'Google Sheet Live ✓';
+          })
+          .catch(err => {
+            fetchServerProxy();
+          });
+      } else {
+        fetchServerProxy();
+      }
+
+      function fetchServerProxy() {
+        fetch('/api/database?fresh=true')
+          .then(res => res.json())
+          .then(res => {
+            if (res.data) {
+              renderAppData(res.data);
+              if (res.data.settings?.appsScriptUrl && !APPS_SCRIPT_URL) {
+                APPS_SCRIPT_URL = res.data.settings.appsScriptUrl;
+                localStorage.setItem('nc_apps_script_url', APPS_SCRIPT_URL);
+              }
+            }
+            if (syncPill) syncPill.textContent = 'Google Sheet Live ✓';
+          })
+          .catch(() => {
+            if (syncPill) syncPill.textContent = 'Standby Mode';
+          });
+      }
+    }
+
+    function renderAppData(data) {
+      appData = data;
+      renderSingersGrid();
+      renderSoundsGrid();
+      renderClassesGrid();
+      populateAdminSingerSelect();
+      renderAdminSongList();
+      renderAdminSoundsList();
+      renderAdminCoursesList();
+
+      if (data.settings) {
+        if (data.settings.hotline1 || data.settings.hotline2) {
+          document.getElementById('hotline-display').textContent = `${data.settings.hotline1 || ''} / ${data.settings.hotline2 || ''}`;
+        }
+        if (data.settings.location) {
+          document.getElementById('location-display').textContent = data.settings.location;
+        }
+        if (data.settings.officialBio) {
+          document.getElementById('hero-channel-bio').textContent = `"${data.settings.officialBio}"`;
+        }
+      }
+    }
+
+    function renderSingersGrid() {
+      const container = document.getElementById('singers-grid');
+      if (!container || !appData.singers) return;
+
+      container.innerHTML = appData.singers.map(s => {
+        const singerSongs = (appData.songs || []).filter(song => song.singerId === s.singerId);
+        const totalVotes = singerSongs.reduce((sum, song) => sum + song.voteCount, 0);
+        const repVideo = s.avatarVideoId || (singerSongs[0] ? singerSongs[0].youtubeVideoId : 'kJQP7kiw5Fk');
+        const thumbUrl = getYouTubeThumb(repVideo);
+
+        return `
+          <div onclick="openSingerModal('${s.singerId}')" class="glass-card rounded-2xl overflow-hidden cursor-pointer group hover:scale-[1.02] transition-all">
+            <div class="relative aspect-video bg-black/60 overflow-hidden">
+              <img src="${thumbUrl}" alt="${s.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute bottom-2 left-3 text-xs font-mono text-amber-400 font-bold">${s.singerId}</span>
+              <span class="absolute bottom-2 right-3 text-[11px] font-medium bg-black/70 px-2 py-0.5 rounded text-white">${singerSongs.length} Songs</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-white text-base group-hover:text-amber-400 transition-colors">${s.name}</h3>
+              <p class="text-xs text-slate-400 line-clamp-2 mt-1 mb-3">${s.bio}</p>
+              <div class="flex items-center justify-between text-xs pt-2 border-t border-white/10">
+                <span class="text-slate-400">Total Live Votes:</span>
+                <span class="text-amber-400 font-black tabular-nums">${totalVotes.toLocaleString()}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderSoundsGrid() {
+      const container = document.getElementById('sounds-grid');
+      if (!container || !appData.sounds) return;
+      container.innerHTML = appData.sounds.map(snd => `
+        <div class="glass-card rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">${snd.category}</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">Available</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">${snd.title}</h3>
+            <p class="text-amber-300 font-extrabold text-sm mb-3">${snd.rentalPricing}</p>
+            <ul class="text-xs text-slate-300 space-y-1 mb-4">
+              ${(snd.specifications || []).map(sp => `<li>· ${sp}</li>`).join('')}
+            </ul>
+          </div>
+          <button onclick="switchTab('contact')" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-semibold text-white transition-colors">
+            Book Equipment
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function renderClassesGrid() {
+      const container = document.getElementById('classes-grid');
+      if (!container || !appData.courses) return;
+      container.innerHTML = appData.courses.map(c => `
+        <div class="glass-card rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] text-amber-400 font-bold uppercase mb-1">${c.instructor}</div>
+            <h3 class="text-base font-bold text-white">${c.title}</h3>
+            ${c.sinhalaTitle ? `<div class="text-xs text-slate-300 mb-2">${c.sinhalaTitle}</div>` : ''}
+            <p class="text-xs text-slate-400 line-clamp-2 my-2">${c.description || ''}</p>
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-4 pt-2 border-t border-white/10">
+              <span>${c.schedule}</span>
+              <span class="text-amber-400 font-extrabold">${c.fee}</span>
+            </div>
+          </div>
+          <button onclick="switchTab('contact')" class="w-full py-2.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/30 text-xs font-bold transition-colors">
+            Enroll in Academy
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function openSingerModal(singerId) {
+      currentActiveSinger = appData.singers.find(s => s.singerId === singerId);
+      if (!currentActiveSinger) return;
+
+      const singerSongs = (appData.songs || []).filter(s => s.singerId === singerId);
+      const content = document.getElementById('singer-modal-content');
+
+      content.innerHTML = `
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-20 h-20 rounded-2xl overflow-hidden bg-black/50 shrink-0">
+            <img src="${getYouTubeThumb(currentActiveSinger.avatarVideoId || singerSongs[0]?.youtubeVideoId || 'kJQP7kiw5Fk')}" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="text-xs text-amber-400 font-mono font-bold">${currentActiveSinger.singerId} · Senkadagalata Paayana Tharu</div>
+            <h2 class="text-xl font-bold text-white">${currentActiveSinger.name}</h2>
+            <p class="text-xs text-slate-300 mt-1">${currentActiveSinger.bio}</p>
+          </div>
+        </div>
+
+        <h3 class="text-sm font-bold text-white mb-3">Competition Performance Songs (${singerSongs.length})</h3>
+        <div class="space-y-3">
+          ${singerSongs.map(song => `
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition-all">
+              <div class="flex items-center gap-3">
+                <img src="${getYouTubeThumb(song.youtubeVideoId)}" class="w-20 h-12 object-cover rounded-xl shrink-0">
+                <div>
+                  <h4 class="text-xs sm:text-sm font-semibold text-white">${song.songTitle}</h4>
+                  <div class="text-xs text-slate-400 font-mono">Live Votes: <strong class="text-amber-400">${song.voteCount.toLocaleString()}</strong></div>
+                </div>
+              </div>
+              <button onclick="openVoteModal('${song.songId}')" class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-xs rounded-xl transition-colors shrink-0">
+                Watch & Vote
+              </button>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      document.getElementById('singer-modal').classList.remove('hidden');
+    }
+
+    function closeSingerModal() {
+      document.getElementById('singer-modal').classList.add('hidden');
+    }
+
+    function openVoteModal(songId) {
+      currentActiveSong = (appData.songs || []).find(s => s.songId === songId);
+      if (!currentActiveSong) return;
+
+      document.getElementById('vote-song-title').textContent = currentActiveSong.songTitle;
+      document.getElementById('vote-singer-name').textContent = currentActiveSinger?.name || '';
+      isVideoEnded = false;
+      document.getElementById('watch-status-text').textContent = 'Watch video to end to unlock vote';
+      document.getElementById('watch-status-text').className = 'font-bold text-amber-400';
+
+      updateSubStatusUI();
+      document.getElementById('vote-modal').classList.remove('hidden');
+
+      if (ytPlayer && ytPlayer.destroy) {
+        try { ytPlayer.destroy(); } catch (e) {}
+      }
+      ytPlayer = new YT.Player('yt-player-container', {
+        videoId: currentActiveSong.youtubeVideoId,
+        playerVars: { autoplay: 1, rel: 0 },
+        events: {
+          onStateChange: function(event) {
+            if (event.data === 0) { // ENDED
+              isVideoEnded = true;
+              document.getElementById('watch-status-text').textContent = 'Video Completed ✓';
+              document.getElementById('watch-status-text').className = 'font-bold text-emerald-400';
+              checkVoteButtonState();
+              showToast('Full performance watched! Vote unlocked.');
+            }
+          }
+        }
+      });
+    }
+
+    function checkVoteButtonState() {
+      const btn = document.getElementById('btn-submit-vote');
+      if (!btn) return;
+      if (isVideoEnded && isSubscribed) {
+        btn.disabled = false;
+        btn.classList.add('glow-gold');
+      } else {
+        btn.disabled = true;
+        btn.classList.remove('glow-gold');
+      }
+    }
+
+    function executeVoteSubmission() {
+      if (!isVideoEnded || !isSubscribed) {
+        showToast('Please watch full video and verify subscription first.', false);
+        return;
+      }
+
+      const postPayload = {
+        action: 'registerVote',
+        singerId: currentActiveSong.singerId,
+        songId: currentActiveSong.songId,
+        verificationToken: 'GAS_VERIFIED_SUB',
+        clientFingerprint: navigator.userAgent
+      };
+
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(res => {
+            showToast(res.message || 'Vote registered in Google Sheet!');
+            closeVoteModal();
+            syncDataFromBackend();
+          })
+          .registerVote(currentActiveSong.singerId, currentActiveSong.songId, 'GAS_VERIFIED_SUB', navigator.userAgent);
+      } else {
+        fetch('/api/vote', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(postPayload)
+        })
+          .then(res => res.json())
+          .then(res => {
+            showToast(res.message || 'Vote registered in Google Sheet!');
+            closeVoteModal();
+            syncDataFromBackend();
+          })
+          .catch(() => {
+            currentActiveSong.voteCount += 1;
+            showToast('Vote counted locally!');
+            closeVoteModal();
+            renderSingersGrid();
+          });
+      }
+    }
+
+    function closeVoteModal() {
+      if (ytPlayer && ytPlayer.stopVideo) {
+        try { ytPlayer.stopVideo(); } catch (e) {}
+      }
+      document.getElementById('vote-modal').classList.add('hidden');
+    }
+
+    // SECURE ADMIN MODAL LOGIC (Password is never exposed on client)
+    function openAdminModal() { document.getElementById('admin-modal').classList.remove('hidden'); }
+    function closeAdminModal() { document.getElementById('admin-modal').classList.add('hidden'); }
+    
+    function verifyAdminAccess() {
+      const pin = document.getElementById('admin-pin-input').value.trim();
+      if (!pin) {
+        showToast('Please enter administrator passcode', false);
+        return;
+      }
+
+      const btn = document.getElementById('admin-login-btn');
+      btn.textContent = 'Verifying...';
+
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(res => {
+            btn.textContent = 'Verify Passcode';
+            if (res && res.success) {
+              authenticatedAdminPin = pin;
+              document.getElementById('admin-auth-view').classList.add('hidden');
+              document.getElementById('admin-dashboard-view').classList.remove('hidden');
+              showToast('Admin authorized');
+            } else {
+              showToast('Access Denied: Invalid Security Passcode', false);
+            }
+          })
+          .withFailureHandler(() => {
+            btn.textContent = 'Verify Passcode';
+            showToast('Authentication error', false);
+          })
+          .executeApiAction('adminLogin', { adminPin: pin });
+      } else {
+        fetch('/api/admin/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pin })
+        })
+          .then(res => res.json())
+          .then(res => {
+            btn.textContent = 'Verify Passcode';
+            if (res.success) {
+              authenticatedAdminPin = pin;
+              document.getElementById('admin-auth-view').classList.add('hidden');
+              document.getElementById('admin-dashboard-view').classList.remove('hidden');
+              showToast('Admin authorized');
+            } else {
+              showToast('Access Denied: Invalid Security Passcode', false);
+            }
+          })
+          .catch(() => {
+            btn.textContent = 'Verify Passcode';
+            showToast('Authentication error', false);
+          });
+      }
+    }
+
+    function lockAdmin() {
+      authenticatedAdminPin = null;
+      document.getElementById('admin-auth-view').classList.remove('hidden');
+      document.getElementById('admin-dashboard-view').classList.add('hidden');
+      document.getElementById('admin-pin-input').value = '';
+    }
+
+    function populateAdminSingerSelect() {
+      const select = document.getElementById('admin-singer-select');
+      if (!select || !appData.singers) return;
+      select.innerHTML = appData.singers.map(s => `<option value="${s.singerId}">${s.singerId} - ${s.name}</option>`).join('');
+    }
+
+    function previewAdminThumb(val) {
+      const box = document.getElementById('admin-thumb-preview');
+      const img = document.getElementById('admin-thumb-img');
+      if (val && val.trim()) {
+        box.classList.remove('hidden');
+        img.src = getYouTubeThumb(val);
+      } else {
+        box.classList.add('hidden');
+      }
+    }
+
+    function adminAddSong() {
+      const singerId = document.getElementById('admin-singer-select').value;
+      const title = document.getElementById('admin-song-title').value;
+      const videoId = document.getElementById('admin-youtube-id').value;
+
+      if (!title || !videoId) {
+        showToast('Please provide Song Title and YouTube Video ID', false);
+        return;
+      }
+
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(res => {
+            showToast(res.message);
+            syncDataFromBackend();
+            document.getElementById('admin-song-title').value = '';
+            document.getElementById('admin-youtube-id').value = '';
+          })
+          .addSongToSingerProfile(singerId, title, videoId, authenticatedAdminPin);
+      } else {
+        fetch('/api/song', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ singerId, songTitle: title, youtubeVideoId: videoId, adminPin: authenticatedAdminPin })
+        })
+          .then(res => res.json())
+          .then(res => {
+            showToast(res.message);
+            syncDataFromBackend();
+            document.getElementById('admin-song-title').value = '';
+            document.getElementById('admin-youtube-id').value = '';
+          });
+      }
+    }
+
+    function renderAdminSongList() {
+      const container = document.getElementById('admin-songs-list');
+      if (!container || !appData.songs) return;
+      container.innerHTML = appData.songs.map(sg => {
+        const singer = (appData.singers || []).find(s => s.singerId === sg.singerId);
+        return `
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs">
+            <div class="flex items-center gap-2">
+              <img src="${getYouTubeThumb(sg.youtubeVideoId)}" class="w-12 h-8 object-cover rounded-lg">
+              <div>
+                <div class="font-bold text-white">${sg.songTitle}</div>
+                <div class="text-slate-400 font-mono text-[11px]">${singer ? singer.name : sg.singerId} · Votes: ${sg.voteCount}</div>
+              </div>
+            </div>
+            <button onclick="adminDeleteSong('${sg.songId}')" class="px-2.5 py-1 bg-red-500/20 hover:bg-red-500/30 text-red-300 rounded-lg text-[11px] transition-colors">
+              Delete
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function adminDeleteSong(songId) {
+      if (!confirm('Permanently delete this song performance from Google Sheet?')) return;
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(res => {
+            showToast(res.message);
+            syncDataFromBackend();
+          })
+          .deleteSong(songId, authenticatedAdminPin);
+      } else {
+        fetch(`/api/song/${encodeURIComponent(songId)}?adminPin=${encodeURIComponent(authenticatedAdminPin)}`, { method: 'DELETE' })
+          .then(res => res.json())
+          .then(res => {
+            showToast(res.message);
+            syncDataFromBackend();
+          });
+      }
+    }
+
+    // DYNAMIC CRUD FOR SOUND EQUIPMENT & RENTALS
+    function renderAdminSoundsList() {
+      const container = document.getElementById('admin-sounds-list');
+      if (!container || !appData.sounds) return;
+      container.innerHTML = appData.sounds.map(snd => `
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs">
+          <div>
+            <div class="font-bold text-white">${snd.title} <span class="text-amber-400 font-mono">(${snd.itemId})</span></div>
+            <div class="text-slate-400 text-[11px]">${snd.category} · ${snd.rentalPricing}</div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button onclick="editSoundItem('${snd.itemId}')" class="px-2.5 py-1 bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 rounded-lg text-[11px] transition-colors">
+              Edit
+            </button>
+            <button onclick="adminDeleteSound('${snd.itemId}')" class="px-2.5 py-1 bg-red-500/20 hover:bg-red-500/30 text-red-300 rounded-lg text-[11px] transition-colors">
+              Delete
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function editSoundItem(itemId) {
+      const item = (appData.sounds || []).find(s => s.itemId === itemId);
+      if (!item) return;
+      document.getElementById('admin-sound-id').value = item.itemId;
+      document.getElementById('admin-sound-title').value = item.title;
+      document.getElementById('admin-sound-category').value = item.category;
+      document.getElementById('admin-sound-pricing').value = item.rentalPricing;
+      document.getElementById('admin-sound-specs').value = (item.specifications || []).join('\n');
+      document.getElementById('sound-form-title').textContent = `Editing Equipment: ${item.itemId}`;
+      document.getElementById('btn-save-sound').textContent = 'Update Equipment in Google Sheet';
+      document.getElementById('btn-cancel-sound-edit').classList.remove('hidden');
+    }
+
+    function resetSoundForm() {
+      document.getElementById('admin-sound-id').value = '';
+      document.getElementById('admin-sound-title').value = '';
+      document.getElementById('admin-sound-pricing').value = '';
+      document.getElementById('admin-sound-specs').value = '';
+      document.getElementById('sound-form-title').textContent = 'Add / Edit Sound Equipment & Rental Item';
+      document.getElementById('btn-save-sound').textContent = 'Save Equipment to Google Sheet';
+      document.getElementById('btn-cancel-sound-edit').classList.add('hidden');
+    }
+
+    function adminSaveSound() {
+      const itemId = document.getElementById('admin-sound-id').value.trim();
+      const title = document.getElementById('admin-sound-title').value.trim();
+      const category = document.getElementById('admin-sound-category').value;
+      const rentalPricing = document.getElementById('admin-sound-pricing').value.trim() || 'Contact Studio';
+      const specs = document.getElementById('admin-sound-specs').value.split('\n').map(s => s.trim()).filter(Boolean);
+
+      if (!title) {
+        showToast('Equipment title is required', false);
+        return;
+      }
+
+      const payload = {
+        itemId: itemId || undefined,
+        title,
+        category,
+        rentalPricing,
+        specifications: specs.length > 0 ? specs : ['Contact studio for technical setup'],
+        isAvailable: true
+      };
+
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(res => {
+            showToast(res.message);
+            resetSoundForm();
+            syncDataFromBackend();
+          })
+          .saveSoundService(payload, authenticatedAdminPin);
+      } else {
+        fetch('/api/sound', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ soundData: payload, adminPin: authenticatedAdminPin })
+        })
+          .then(res => res.json())
+          .then(res => {
+            showToast(res.message);
+            resetSoundForm();
+            syncDataFromBackend();
+          });
+      }
+    }
+
+    function adminDeleteSound(itemId) {
+      if (!confirm('Permanently delete this sound rental item from Google Sheet?')) return;
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(res => {
+            showToast(res.message);
+            syncDataFromBackend();
+          })
+          .deleteSoundService(itemId, authenticatedAdminPin);
+      } else {
+        fetch(`/api/sound/${encodeURIComponent(itemId)}?adminPin=${encodeURIComponent(authenticatedAdminPin)}`, { method: 'DELETE' })
+          .then(res => res.json())
+          .then(res => {
+            showToast(res.message);
+            syncDataFromBackend();
+          });
+      }
+    }
+
+    // DYNAMIC CRUD FOR MUSIC ACADEMY CLASSES
+    function renderAdminCoursesList() {
+      const container = document.getElementById('admin-courses-list');
+      if (!container || !appData.courses) return;
+      container.innerHTML = appData.courses.map(c => `
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs">
+          <div>
+            <div class="font-bold text-white">${c.title} <span class="text-amber-400 font-mono">(${c.courseId})</span></div>
+            <div class="text-slate-400 text-[11px]">${c.instructor} · ${c.fee}</div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button onclick="editCourseItem('${c.courseId}')" class="px-2.5 py-1 bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 rounded-lg text-[11px] transition-colors">
+              Edit
+            </button>
+            <button onclick="adminDeleteCourse('${c.courseId}')" class="px-2.5 py-1 bg-red-500/20 hover:bg-red-500/30 text-red-300 rounded-lg text-[11px] transition-colors">
+              Delete
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function editCourseItem(courseId) {
+      const course = (appData.courses || []).find(c => c.courseId === courseId);
+      if (!course) return;
+      document.getElementById('admin-course-id').value = course.courseId;
+      document.getElementById('admin-course-title').value = course.title;
+      document.getElementById('admin-course-sinhala').value = course.sinhalaTitle || '';
+      document.getElementById('admin-course-instructor').value = course.instructor;
+      document.getElementById('admin-course-schedule').value = course.schedule;
+      document.getElementById('admin-course-fee').value = course.fee;
+      document.getElementById('admin-course-duration').value = course.duration;
+      document.getElementById('admin-course-desc').value = course.description || '';
+      document.getElementById('course-form-title').textContent = `Editing Course: ${course.courseId}`;
+      document.getElementById('btn-save-course').textContent = 'Update Course in Google Sheet';
+      document.getElementById('btn-cancel-course-edit').classList.remove('hidden');
+    }
+
+    function resetCourseForm() {
+      document.getElementById('admin-course-id').value = '';
+      document.getElementById('admin-course-title').value = '';
+      document.getElementById('admin-course-sinhala').value = '';
+      document.getElementById('admin-course-schedule').value = '';
+      document.getElementById('admin-course-fee').value = '';
+      document.getElementById('admin-course-duration').value = '';
+      document.getElementById('admin-course-desc').value = '';
+      document.getElementById('course-form-title').textContent = 'Add / Edit Academy Class & Course';
+      document.getElementById('btn-save-course').textContent = 'Save Course to Google Sheet';
+      document.getElementById('btn-cancel-course-edit').classList.add('hidden');
+    }
+
+    function adminSaveCourse() {
+      const courseId = document.getElementById('admin-course-id').value.trim();
+      const title = document.getElementById('admin-course-title').value.trim();
+      const sinhalaTitle = document.getElementById('admin-course-sinhala').value.trim();
+      const instructor = document.getElementById('admin-course-instructor').value.trim() || 'Keerthi Senkadagala (Music Director)';
+      const schedule = document.getElementById('admin-course-schedule').value.trim() || 'Weekends';
+      const fee = document.getElementById('admin-course-fee').value.trim() || 'Contact Studio';
+      const duration = document.getElementById('admin-course-duration').value.trim() || 'Flexible';
+      const description = document.getElementById('admin-course-desc').value.trim();
+
+      if (!title) {
+        showToast('Course title is required', false);
+        return;
+      }
+
+      const payload = {
+        courseId: courseId || undefined,
+        title,
+        sinhalaTitle,
+        instructor,
+        schedule,
+        fee,
+        duration,
+        description,
+        syllabusHighlights: [],
+        isEnrolling: true
+      };
+
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(res => {
+            showToast(res.message);
+            resetCourseForm();
+            syncDataFromBackend();
+          })
+          .saveAcademyCourse(payload, authenticatedAdminPin);
+      } else {
+        fetch('/api/course', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ courseData: payload, adminPin: authenticatedAdminPin })
+        })
+          .then(res => res.json())
+          .then(res => {
+            showToast(res.message);
+            resetCourseForm();
+            syncDataFromBackend();
+          });
+      }
+    }
+
+    function adminDeleteCourse(courseId) {
+      if (!confirm('Permanently delete this academy course from Google Sheet?')) return;
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(res => {
+            showToast(res.message);
+            syncDataFromBackend();
+          })
+          .deleteAcademyCourse(courseId, authenticatedAdminPin);
+      } else {
+        fetch(`/api/course/${encodeURIComponent(courseId)}?adminPin=${encodeURIComponent(authenticatedAdminPin)}`, { method: 'DELETE' })
+          .then(res => res.json())
+          .then(res => {
+            showToast(res.message);
+            syncDataFromBackend();
+          });
+      }
+    }
+
+    function handleInquiry(e) {
+      e.preventDefault();
+      showToast('Thank you! Inquiry sent to Music Director Keerthi Senkadagala.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

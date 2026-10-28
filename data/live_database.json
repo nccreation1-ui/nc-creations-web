@@ -1,0 +1,245 @@
+{
+  "singers": [
+    {
+      "singerId": "NCC/0001",
+      "name": "Renuk Madushanka (රේණුක්)",
+      "bio": "Versatile vocalist specializing in classical fusion and acoustic ballads. Competing in 'සෙන්කඩගලට පායන තරු' Grand Stage.",
+      "createdTimestamp": "2026-02-15T10:00:00.000Z",
+      "avatarVideoId": "kJQP7kiw5Fk"
+    },
+    {
+      "singerId": "NCC/0002",
+      "name": "Nethmi Kavindya (නෙත්මි)",
+      "bio": "Soulful acoustic performer with exceptional dynamic range and emotion, trained in Eastern Hindustani ragas at NC Academy.",
+      "createdTimestamp": "2026-02-18T14:30:00.000Z",
+      "avatarVideoId": "9bZkp7q19f0"
+    },
+    {
+      "singerId": "NCC/0003",
+      "name": "Prageeth Fernando (ප්‍රගීත්)",
+      "bio": "High-octane rock and contemporary pop vocalist renowned for stage energy and rich baritone timbre.",
+      "createdTimestamp": "2026-02-20T09:15:00.000Z",
+      "avatarVideoId": "fJ9rUzIMcZQ"
+    },
+    {
+      "singerId": "NCC/0004",
+      "name": "Kasun Jayasundara (කසුන්)",
+      "bio": "Expressive lyrical interpreter from Kandy Valley, blending folk heritage with modern cinematic instrumentation.",
+      "createdTimestamp": "2026-02-22T16:45:00.000Z",
+      "avatarVideoId": "L_LUpnjgPso"
+    },
+    {
+      "singerId": "NCC/0005",
+      "name": "Maheshika Fernando (මහේෂිකා)",
+      "bio": "Traditional fusion vocal artist",
+      "createdTimestamp": "2026-10-27T02:01:31.144Z",
+      "avatarVideoId": ""
+    }
+  ],
+  "songs": [
+    {
+      "songId": "SNG/001",
+      "singerId": "NCC/0001",
+      "songTitle": "සඳ කැන් වැසි (Sanda Kan Wesi - Acoustic Live)",
+      "youtubeVideoId": "kJQP7kiw5Fk",
+      "voteCount": 1420,
+      "isActive": true,
+      "addedTimestamp": "2026-02-15T10:15:00.000Z"
+    },
+    {
+      "songId": "SNG/002",
+      "singerId": "NCC/0001",
+      "songTitle": "හිරු දෙනෙතින් (Hiru Denethin - NC Studio Session)",
+      "youtubeVideoId": "3tmd-ClpJxA",
+      "voteCount": 985,
+      "isActive": true,
+      "addedTimestamp": "2026-02-16T11:00:00.000Z"
+    },
+    {
+      "songId": "SNG/003",
+      "singerId": "NCC/0002",
+      "songTitle": "මල් මීදුමේ (Mal Meedume - Studio Master)",
+      "youtubeVideoId": "9bZkp7q19f0",
+      "voteCount": 1850,
+      "isActive": true,
+      "addedTimestamp": "2026-02-18T15:00:00.000Z"
+    },
+    {
+      "songId": "SNG/004",
+      "singerId": "NCC/0002",
+      "songTitle": "සුවඳක් තියා (Suwandak Thiya - Unplugged)",
+      "youtubeVideoId": "ZbZSe6N_BXs",
+      "voteCount": 1120,
+      "isActive": true,
+      "addedTimestamp": "2026-02-19T13:20:00.000Z"
+    },
+    {
+      "songId": "SNG/005",
+      "singerId": "NCC/0003",
+      "songTitle": "ගිනි දැල් අතරේ (Gini Del Athare - Reality Stage)",
+      "youtubeVideoId": "fJ9rUzIMcZQ",
+      "voteCount": 1310,
+      "isActive": true,
+      "addedTimestamp": "2026-02-20T10:00:00.000Z"
+    },
+    {
+      "songId": "SNG/006",
+      "singerId": "NCC/0004",
+      "songTitle": "සෙන්කඩගල පුරවර (Senkadagala Purawara - Folk Tribute)",
+      "youtubeVideoId": "L_LUpnjgPso",
+      "voteCount": 1540,
+      "isActive": true,
+      "addedTimestamp": "2026-02-22T17:00:00.000Z"
+    },
+    {
+      "songId": "SNG/007",
+      "singerId": "NCC/0005",
+      "songTitle": "තරු කඩා වැටෙන රෑ (Tharu Kada Wetena Re)",
+      "youtubeVideoId": "kJQP7kiw5Fk",
+      "voteCount": 250,
+      "isActive": true,
+      "addedTimestamp": "2026-10-27T02:01:31.144Z"
+    }
+  ],
+  "sounds": [
+    {
+      "itemId": "SND-01",
+      "title": "Concert Line-Array Pro Sound System (6000W)",
+      "category": "PA Systems",
+      "rentalPricing": "LKR 55,000 / Day",
+      "specifications": [
+        "8-Box Dual Line Array with Dual 18\" Subwoofers",
+        "Digital FOH System with Stagebox & Multi-Core snake",
+        "Suitable for 1,500+ audience indoor or outdoor festivals",
+        "Includes Sound Engineer & Audio Technicians"
+      ],
+      "isAvailable": true,
+      "featured": true
+    },
+    {
+      "itemId": "SND-02",
+      "title": "Wedding & Corporate Event Sound Package",
+      "category": "Live Sound",
+      "rentalPricing": "LKR 35,000 / Event",
+      "specifications": [
+        "JBL Active Tops (PRX Series) + Bass Bins",
+        "Shure SLX Wireless Mics & Lapel/Headset Options",
+        "Clean visual presentation with concealed cabling",
+        "DJ Interface & Acoustic Live Band Support"
+      ],
+      "isAvailable": true,
+      "featured": true
+    },
+    {
+      "itemId": "SND-03",
+      "title": "NC Recording Studio Time & Multi-Track Production",
+      "category": "Studio Recording",
+      "rentalPricing": "LKR 3,500 / Hour",
+      "specifications": [
+        "Acoustically tuned live room & isolated vocal booth",
+        "Neumann, AKG & Shure vintage microphone locker",
+        "Universal Audio Apollo & Cubase Pro 13 / ProTools setup",
+        "Music Director Keerthi Senkadagala guidance available"
+      ],
+      "isAvailable": true,
+      "featured": true
+    },
+    {
+      "itemId": "SND-04",
+      "title": "Concert Stage Intelligent Moving Head Lights & Truss",
+      "category": "Lighting & Stage",
+      "rentalPricing": "LKR 28,000 / Event",
+      "specifications": [
+        "Beam 230W Moving Heads, LED Warm White Washes",
+        "DMX Controller Console with custom light scene sequencing",
+        "Haze and low-fog smoke machine for dramatic performance looks",
+        "Rigging truss and certified safety crew"
+      ],
+      "isAvailable": true,
+      "featured": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "CRS-01",
+      "title": "Vocal Culturing & Reality Show Performance Mastery",
+      "sinhalaTitle": "ගායන පුහුණුව හා හඬ පාලනය",
+      "instructor": "Keerthi Senkadagala (Music Director)",
+      "schedule": "Saturdays & Sundays | 9:30 AM - 1:00 PM",
+      "fee": "LKR 6,500 / Month",
+      "duration": "6 Months Certificate / 1 Year Diploma",
+      "description": "Professional voice modulation, breath discipline, microtonal accuracy, mic technique, and TV reality show stage confidence.",
+      "syllabusHighlights": [
+        "Diaphragm control & pitch calibration",
+        "Eastern & Western raga phrasing",
+        "Live microphone dynamic control",
+        "Stage posture & TV camera presence"
+      ],
+      "isEnrolling": true
+    },
+    {
+      "courseId": "CRS-02",
+      "title": "Audio Engineering & Digital Music Production",
+      "sinhalaTitle": "ශබ්ද පරිපාලනය හා සංගීත නිර්මාණකරණය",
+      "instructor": "Senior Studio Engineers & Guest Producers",
+      "schedule": "Weekend Evenings | 3:00 PM - 6:30 PM",
+      "fee": "LKR 9,000 / Month",
+      "duration": "4 Months Intensive Hands-On",
+      "description": "Hands-on DAW workflow (Cubase, Logic Pro, ProTools), mixing, mastering, EQ compression techniques, and audio acoustics.",
+      "syllabusHighlights": [
+        "Studio signal routing & preamps",
+        "Vocal comping & Melodyne tuning",
+        "Drum multi-mic phase alignment",
+        "Mastering for Spotify & YouTube broadcast standards"
+      ],
+      "isEnrolling": true
+    },
+    {
+      "courseId": "CRS-03",
+      "title": "Instrumental Training (Keyboard, Guitar & Violin)",
+      "sinhalaTitle": "වාද්‍ය භාණ්ඩ ප්‍රගුණ කිරීම",
+      "instructor": "NC Academy Specialized Instrument Faculty",
+      "schedule": "Flexible Weekday / Weekend Slots",
+      "fee": "LKR 5,000 / Month",
+      "duration": "Individual & Group Modules",
+      "description": "Learn keyboard harmony, acoustic/electric guitar fingerpicking, or violin bowing tailored for Sri Lankan light music.",
+      "syllabusHighlights": [
+        "Staff notation & oriental notation reading",
+        "Chord progressions & improvisation",
+        "Accompaniment for singers",
+        "Stage amp & pedalboard setup"
+      ],
+      "isEnrolling": true
+    }
+  ],
+  "settings": {
+    "businessName": "The NC Creation's Academy + Sound + Studio",
+    "ownerDirector": "Keerthi Senkadagala",
+    "location": "Gurudeniya, Kandy, Sri Lanka",
+    "officialChannelId": "UC0LAWaBq7XAc8TV17Yj9e9Q",
+    "hotline1": "0704227788",
+    "hotline2": "0775918913",
+    "realityShowName": "සෙන්කඩගලට පායන තරු (Senkadagalata Paayana Tharu)",
+    "officialBio": "සකලවිද කලා කටයුතු මුළුමහත් ලෝකයා වෙත ගෙනයාම උදෙසා නිර්මාණය කරන ලද මෙම නාලිකාව ඔබ සැමගේ සහයෝගය මත ඉදිරියට යනු ඇත. ගීත ගායනය, වාදනය, විවිධ නැටුම් කලාවන්, ගීත විචාර, නාට්ය හා රංගකලාව, ගී පද නිර්මාණය, තනු නිර්මාණය ආදී සකලවිද කලා කටයුතු ඉදිරියේ දී මෙම නාලිකාව හරහා ඔබට අත්විදීමේ අවස්ථාව සැලසෙනු ඇත. මම කීර්ති සෙංකඩගල.",
+    "adminPin": "1994",
+    "appsScriptUrl": ""
+  },
+  "auditLogs": [
+    {
+      "voteId": "VOTE-INIT-001",
+      "singerId": "NCC/0001",
+      "songId": "SNG/001",
+      "timestamp": "2026-10-27T00:54:37.642Z",
+      "subscriberVerificationStatus": "VERIFIED_SUBSCRIBER",
+      "userIpAgent": "Verified YouTube Subscriber (Chrome/124.0 Sri Lanka)"
+    },
+    {
+      "voteId": "VOTE-INIT-002",
+      "singerId": "NCC/0002",
+      "songId": "SNG/003",
+      "timestamp": "2026-10-27T01:24:37.642Z",
+      "subscriberVerificationStatus": "VERIFIED_SUBSCRIBER",
+      "userIpAgent": "Verified YouTube Subscriber (Mobile/Safari Kandy)"
+    }
+  ]
+}

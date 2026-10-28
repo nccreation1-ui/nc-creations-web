@@ -1,0 +1,6 @@
+{
+  "name": "The NC Creation's Academy + Sound + Studio",
+  "description": "Official portal for The NC Creation's Academy, Sound & Studio by Keerthi Senkadagala (Gurudeniya, Kandy, Sri Lanka). Featuring reality show 'සෙන්කඩගලට පායන තරු' voting, YouTube subscriber checks, sound rentals, and music courses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

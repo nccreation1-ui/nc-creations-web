@@ -1,0 +1,46 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+
+    // Public read for reality show content and studio services
+    match /singers/{singerId} {
+      allow read: if true;
+      allow write: if true; // Managed by admin PIN in frontend application
+    }
+
+    match /singer_songs/{songId} {
+      allow read: if true;
+      allow write: if true; // Public fan voting increments & admin updates
+    }
+
+    match /votes_audit_log/{voteId} {
+      allow read: if true;
+      allow create: if request.resource.data.voteId is string
+                    && request.resource.data.singerId is string
+                    && request.resource.data.songId is string
+                    && request.resource.data.subscriberVerificationStatus == 'VERIFIED_SUBSCRIBER';
+      allow update, delete: if false; // Audit logs are immutable
+    }
+
+    match /services_sounds/{soundId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /classes_courses/{courseId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}

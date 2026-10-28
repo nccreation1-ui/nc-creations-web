@@ -1,0 +1,122 @@
+{
+  "entities": {
+    "Singer": {
+      "title": "Singer",
+      "description": "Reality show competitor artist profile",
+      "type": "object",
+      "properties": {
+        "singerId": { "type": "string", "description": "Unique Singer ID e.g. NCC/0001" },
+        "name": { "type": "string", "description": "Artist Name" },
+        "bio": { "type": "string", "description": "Artist biography" },
+        "createdTimestamp": { "type": "string", "description": "Creation timestamp" },
+        "avatarVideoId": { "type": "string", "description": "YouTube video ID for avatar" }
+      },
+      "required": ["singerId", "name"]
+    },
+    "SingerSong": {
+      "title": "SingerSong",
+      "description": "Song performance assigned to an artist",
+      "type": "object",
+      "properties": {
+        "songId": { "type": "string", "description": "Unique Song ID e.g. SNG/001" },
+        "singerId": { "type": "string", "description": "Foreign key to Singer" },
+        "songTitle": { "type": "string", "description": "Performance Song Title" },
+        "youtubeVideoId": { "type": "string", "description": "YouTube Video ID" },
+        "voteCount": { "type": "number", "description": "Total verified votes" },
+        "isActive": { "type": "boolean", "description": "Active status" },
+        "addedTimestamp": { "type": "string", "description": "Timestamp added" }
+      },
+      "required": ["songId", "singerId", "songTitle", "youtubeVideoId", "voteCount"]
+    },
+    "VoteAuditLog": {
+      "title": "VoteAuditLog",
+      "description": "Audit record of cast vote",
+      "type": "object",
+      "properties": {
+        "voteId": { "type": "string", "description": "Unique Vote ID" },
+        "singerId": { "type": "string", "description": "Singer ID voted for" },
+        "songId": { "type": "string", "description": "Song ID voted for" },
+        "timestamp": { "type": "string", "description": "ISO timestamp" },
+        "subscriberVerificationStatus": { "type": "string", "description": "Verification status" },
+        "userIpAgent": { "type": "string", "description": "Client user agent fingerprint" }
+      },
+      "required": ["voteId", "singerId", "songId", "timestamp", "subscriberVerificationStatus"]
+    },
+    "SoundService": {
+      "title": "SoundService",
+      "description": "Sound system and PA rental item",
+      "type": "object",
+      "properties": {
+        "itemId": { "type": "string", "description": "Unique item ID" },
+        "title": { "type": "string", "description": "Item Title" },
+        "category": { "type": "string", "description": "Equipment Category" },
+        "rentalPricing": { "type": "string", "description": "Pricing display" },
+        "specifications": { "type": "array", "description": "Bullet points" },
+        "isAvailable": { "type": "boolean", "description": "Availability" },
+        "featured": { "type": "boolean", "description": "Featured status" }
+      },
+      "required": ["itemId", "title", "rentalPricing"]
+    },
+    "AcademyCourse": {
+      "title": "AcademyCourse",
+      "description": "Academy course offering",
+      "type": "object",
+      "properties": {
+        "courseId": { "type": "string", "description": "Course ID" },
+        "title": { "type": "string", "description": "Course title" },
+        "sinhalaTitle": { "type": "string", "description": "Sinhala title" },
+        "instructor": { "type": "string", "description": "Instructor name" },
+        "schedule": { "type": "string", "description": "Class schedule" },
+        "fee": { "type": "string", "description": "Fee" },
+        "duration": { "type": "string", "description": "Duration" },
+        "description": { "type": "string", "description": "Description" },
+        "syllabusHighlights": { "type": "array", "description": "Syllabus points" },
+        "isEnrolling": { "type": "boolean", "description": "Enrollment status" }
+      },
+      "required": ["courseId", "title", "fee"]
+    },
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global studio settings and metadata",
+      "type": "object",
+      "properties": {
+        "businessName": { "type": "string", "description": "Studio name" },
+        "ownerDirector": { "type": "string", "description": "Director name" },
+        "location": { "type": "string", "description": "Location" },
+        "officialChannelId": { "type": "string", "description": "Official YouTube Channel ID" },
+        "hotline1": { "type": "string", "description": "Hotline 1" },
+        "hotline2": { "type": "string", "description": "Hotline 2" },
+        "realityShowName": { "type": "string", "description": "Reality Show Title" },
+        "officialBio": { "type": "string", "description": "Official bio quote" },
+        "adminPin": { "type": "string", "description": "Admin PIN" }
+      },
+      "required": ["businessName", "ownerDirector", "officialChannelId"]
+    }
+  },
+  "firestore": {
+    "/singers/{singerDocId}": {
+      "schema": "Singer",
+      "description": "Collection of reality show singers"
+    },
+    "/singer_songs/{songDocId}": {
+      "schema": "SingerSong",
+      "description": "Collection of songs assigned to singers"
+    },
+    "/votes_audit_log/{voteDocId}": {
+      "schema": "VoteAuditLog",
+      "description": "Audit trail of votes submitted by verified subscribers"
+    },
+    "/services_sounds/{soundDocId}": {
+      "schema": "SoundService",
+      "description": "Collection of sound and equipment rental items"
+    },
+    "/classes_courses/{courseDocId}": {
+      "schema": "AcademyCourse",
+      "description": "Collection of academy courses"
+    },
+    "/settings/{settingDocId}": {
+      "schema": "SiteSettings",
+      "description": "Global site settings document"
+    }
+  }
+}
